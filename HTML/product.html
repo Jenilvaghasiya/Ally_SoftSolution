@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+</head>
+<body>
+    <div>
+        <select id = Product>
+            <option>product 1</option>
+            <option>product 2</option>
+            <option>product 3</option>
+            <option>product 4</option>
+        </select>
+        <label>Qty :</label>
+        <input type="text" id="Qty">
+        <label>Rate :</label>
+        <input type="text" id="rate">
+        <label>Total Amt :</label>
+        <input type="text" id="total" readonly>
+        <button onclick="btn()">Add+</button>
+    </div>
+    <script>
+        function cal() {
+            let Qty = document.getElementById("Qty").value;
+            let rate = document.getElementById("rate").value;
+            let total = (Qty)*(rate);
+            document.getElementById("total").value = total;
+        }
+        document.getElementById("Qty").oninput = cal;
+        document.getElementById("rate").oninput = cal;
+
+        function btn() {
+            document.getElementById("Product").value;
+        }
+    </script>
+</body>
+</html>

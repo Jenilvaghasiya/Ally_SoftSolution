@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <strong>Select Birth Date : </strong><input type="date" id="age">
+    <button type="submit" onclick="Birth()">Submit</button>
+    <p id="result"> Total :</p>
+    <hr>
+    <strong>Select Birth Date : </strong><input type="date" id="BD" onchange="enable()">
+    <strong>Select Current Date : </strong><input type="date" id="CD" disabled>
+    <button type="submit" onclick="check()">Click it !</button>
+    <p id="rst"> Check Total :</p>
+</body>
+<script>
+
+        function Birth(){
+            const dob = document.getElementById("age").value;
+            if (!dob) return;
+
+            const currMonth = new Date().getMonth();
+            const birthMonth = new Date(dob).getMonth();
+
+            if(currMonth >= birthMonth){
+                const result = new Date().getFullYear() - new Date(dob).getFullYear();
+                 document.getElementById("result").innerText = `Total : ${result}`;
+                 console.log(result);
+                return;
+            }
+            const result = new Date().getFullYear() - new Date(dob).getFullYear();
+
+            document.getElementById("result").innerText = `Total : ${result}`;
+        }
+
+    function enable() {
+        const bd = document.getElementById("BD").value;
+        document.getElementById("CD").disabled = !bd;
+    }
+
+    function check(){
+            const bd = new Date(document.getElementById("BD").value);
+            const cd = new Date(document.getElementById("CD").value);
+            
+            if(cd == null || bd == null) return;
+            
+            if(bd > cd) {
+                document.getElementById("rst").innerHTML = `Check Total : No Result !!!`;
+                return;
+            }
+
+            let years = cd.getFullYear() - bd.getFullYear();
+            let months = cd.getMonth() - bd.getMonth();
+            let days = cd.getDate() - bd.getDate();
+
+            if(days < 0){
+                months--;
+                days += new Date(cd.getFullYear(), cd.getMonth(), 0).getDate();
+            }
+
+            if(months < 0){
+                years--;
+                months += 12;
+            }
+
+            document.getElementById("rst").innerText = `Check Total :  ${years} Years, ${months} Months, ${days} Days`;
+    }
+</script>
+</html>

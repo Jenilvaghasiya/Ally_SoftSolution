@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Product List</title>
+  <style>
+    .row {
+      margin: 5px 0;
+    }
+    input {
+      width: 80px;
+      margin: 0 5px;
+    }
+    select {
+      margin-right: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h3>Product Entry</h3>
+  <div id="productContainer"></div>
+
+  <h3>Total Amount: <span id="grandTotal">0</span></h3>
+
+  <script>
+    let container = document.getElementById("productContainer");
+    let grandTotal = 0;
+
+    function addRow() {
+      let row = document.createElement("div");
+      row.className = "row";
+
+      row.innerHTML = `
+        <select class="product">
+          <option>Product 1</option>
+          <option>Product 2</option>
+          <option>Product 3</option>
+          <option>Product 4</option>
+        </select>
+        <input type="number" class="qty" placeholder="Qty">
+        <input type="number" class="rate" placeholder="Rate">
+        <input type="text" class="total" placeholder="Total" readonly>
+        <button class="addBtn">+</button>
+      `;
+
+      container.appendChild(row);
+
+      // Get elements of this row
+      let qty = row.querySelector(".qty");
+      let rate = row.querySelector(".rate");
+      let total = row.querySelector(".total");
+      let addBtn = row.querySelector(".addBtn");
+
+      // Calculate total for this row
+      function cal() {
+        let q = parseFloat(qty.value) || 0;
+        let r = parseFloat(rate.value) || 0;
+        total.value = q * r;
+      }
+
+      qty.addEventListener("input", cal);
+      rate.addEventListener("input", cal);
+
+      // Add row total to grand total and create new row
+      addBtn.onclick = function () {
+        let rowTotal = parseFloat(total.value) || 0;
+        grandTotal += rowTotal;
+        document.getElementById("grandTotal").innerText = grandTotal;
+        addBtn.disabled = true; // prevent double adding
+        addRow(); // create new row
+      };
+    }
+
+    // Start with first row
+    addRow();
+  </script>
+</body>
+</html>
+  

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="date" id="dob">
+<input type="date" id="today">
+<button onclick="calculateAge()">Check Age</button>
+<p id="result"></p>
+
+<script>
+function calculateAge() {
+  const dob = new Date(document.getElementById("dob").value);
+  const today = new Date(document.getElementById("today").value);
+
+  if (!dob || !today) {
+    document.getElementById("result").innerText = "Please select both dates!";
+    return;
+  }
+
+  let years = today.getFullYear() - dob.getFullYear();
+  let months = today.getMonth() - dob.getMonth();
+  let days = today.getDate() - dob.getDate();
+
+  // Adjust months and years
+  if (days < 0) {
+    months--;
+    days += new Date(today.getFullYear(), today.getMonth(), 0).getDate();
+  }
+  if (months < 0) {
+    years--;
+    months += 12;
+  }
+
+  // Time difference (in ms → hours, minutes)
+  const diffMs = today - dob;
+  const totalMinutes = Math.floor(diffMs / 1000 / 60);
+  const totalHours = Math.floor(diffMs / 1000 / 60 / 60);
+  const totalDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+
+  document.getElementById("result").innerText = 
+    `You are ${years} years, ${months} months, ${days} days old.\n` +
+    `That’s about ${totalDays} days, ${totalHours} hours, or ${totalMinutes} minutes.`;
+}
+
+    // function Birth(){
+    //     const res = document.getElementById("result");
+    //     const dob =document.getElementById("age").value;
+
+    //     const current = new Date(dob).getFullYear();
+
+    //     const year = new Date().getFullYear();
+    //     const result = year - current ;
+
+    //     res.innerText=`Total : ${result}`;
+
+    // }
+</script>
+
+</body>
+</html>
+
+

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Age Calculator</title>
+</head>
+<body>
+    <strong>Select Birth Date : </strong>
+    <input type="date" id="age">
+    <button type="button" onclick="calculateAge()">Submit</button>
+    <p id="result">Total :</p>
+
+<script>
+    function calculateAge() {
+        const dobValue = document.getElementById("age").value;
+        if (!dobValue) return; // Exit if no date is selected
+        const diff_ms = Date.now() - new Date(dobValue).getTime()
+        const age_dt = new Date(diff_ms); 
+        const age = Math.abs(age_dt.getUTCFullYear() - 1970);
+
+        document.getElementById("result").innerText = `Total : ${age}`;
+    }
+</script>
+</body>
+</html>

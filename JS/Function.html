@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Creating Variables in JavaScript</title>
+  </head>
+  <body>
+
+    <button id="myBtn">Click Me</button>
+    <script>
+      // // Creating variables
+      // let name = "Peter Parker";
+      // let age = 18;
+      // let isMarried = false;
+
+      // // Printing variable values
+      // document.write(name + "<br>");
+      // document.write(age + "<br>");
+      // document.write(isMarried);
+      // let User;
+      // User = "Jenil";
+      // document.write(User);
+
+      //     let a = null;
+      // document.write(a + "<br>"); // Print: null
+
+      // let b = "Hello World!"
+      // document.write(b + "<br>"); // Print: Hello World!
+
+      // b = null;
+      // alert(b) // Print: null
+
+      //     function createGreeting(name){
+      //     return "Hello, " + name;
+      // }
+      // function displayGreeting(greetingFunction, userName){
+      //     return greetingFunction(userName);
+      // }
+
+      // let result = displayGreeting(createGreeting, "Peter");
+      // document.write(result);
+
+      // let str = "Color red looks brighter than color blue.";
+      // let result = str.replace("red", "white");
+      // console.log(result);
+
+      //     let year = 2012;
+
+      // // Leap years are divisible by 400 or by 4 but not 100
+      // if((year % 400 == 0) || ((year % 100 != 0) && (year % 4 == 0))){
+      //     console.log(year + " is a leap year.");
+      // } else{
+      //     console.log(year + " is not a leap year.");
+      // }
+
+      // let a = "Jenil"
+      // let b = "Vaghsiya"
+      // let result = a + "" + b;
+      // console.log(result);
+
+      // let a = "Jenil"
+      // a += "Vaghsiya"
+      // console.log(a);
+
+      //   let x = 10;
+      //   let y = 20;
+      //   let z = "30";
+
+      //   console.log(x + y); // 30
+      //   console.log(z + z); // '3030'
+      //   console.log(x + z); // '1030'
+      //   console.log(z + x); // '3010'
+      //   console.log("The result is: " + x + y); // 'The result is: 1020'
+      //   console.log(x + y + z);
+
+      // console.log(parseInt("3.14"));  // 3
+      // console.log(parseInt("50px"));  // 50
+      // console.log(parseInt("12pt"));  // 12
+      // console.log(parseInt("0xFF", 16));  // 255
+      // console.log(parseInt("20 years"));  // 20
+      // console.log(parseInt("Year 2048"));  // NaN
+      // console.log(parseInt("10 12 2018"));  // 10
+
+      //   let x = 2; // integer number
+      //   let y = 3.14; // floating-point number
+      //   let z = 0xff;
+      //   console.log(x);
+      //   console.log(y);
+      //   console.log(z);
+
+      // let x = 1.57e4;  // same as 15700
+      // let y = 4.25e+6;  // same as 4.25e6 or 4250000
+      // let z = 4.25e-6;
+      // console.log(x);
+      // console.log(y);
+      // console.log(z);
+
+      // console.log(parseFloat("3.14"));  // 3.14
+      // console.log(parseFloat("50px"));  // 50
+      // console.log(parseFloat("1.6em"));  // 1.6
+      // console.log(parseFloat("124.5 lbs"));  // 124.5
+      // console.log(parseFloat("weight 124.5 lbs"));  // NaN
+      // console.log(parseFloat("6.5 acres"));
+
+      // let x = "8";
+      // let y = x.toString();
+      // document.write(y); // '10'
+      // document.write(typeof y + "<br>"); // string
+      // document.write(typeof x + "<br>"); // number
+
+      // document.write((12).toString() + "<br>"); // '12'
+      // document.write((15.6).toString() + "<br>"); // '15.6'
+      // document.write((6).toString(2) + "<br>"); // '110'
+      // document.write((255).toString(16));
+
+      // let now = new Date();
+      // let DayofWeek = now.getDay();
+      // if(DayofWeek == 0){
+      //   document.write("Have a nice Weekend !");
+      // } else if(DayofWeek == 0){
+      //   document.write("Have Sunday!");
+      // } else{
+      //   document.write("Oops, It's No Weekend !!!");
+      // }
+
+      // let Usertype;
+      // let age = 2;
+      // if(age < 18){
+      //   Usertype = "Child";
+      // }else{
+      //   Usertype = "Adult";
+      // }
+      // document.write(Usertype);
+
+      //   let age = 21;
+      //   let Usertype = age < 18 ? 'child': 'adult';
+
+      //   document.write(Usertype);
+
+      // let day = new Date();
+      // switch (day.getDay()) {
+      //   case 0:
+      //     document.write("Today Sunday");
+      //     break;
+      //   case 1:
+      //     document.write("Today Monday");
+      //     break;
+      //   case 2:
+      //     document.write("Today Tuesday");
+      //     break;
+      //   case 3:
+      //     document.write("Today Wednesday");
+      //     break;
+      //   case 4:
+      //     document.write("Today Thursday");
+      //     break;
+      //   case 5:
+      //     document.write("Today Friday");
+      //     break;
+      //   case 6:
+      //     document.write("Today Saturday");
+      //     break;
+      //   default:
+      //     document.write("No information available for that day.");
+      //     break;
+      // }
+
+    // let c1 = "Red";
+    // let c2 = "Green";
+    // let c3 = "Blue";
+    // let fruits = ["Apple", "Banana", "Mango", "Orange", "Papaya",25, "Jenil", 20];
+    // document.write(c1 + "<br>");
+    // document.write(c2 + "<br>");
+    // document.write(c3 + "<br>");
+    // document.write(fruits + "<br>");
+    // document.write(fruits[fruits.length - 1 ]);
+    
+    // let fruits = ["Apple", "Banana", "Mango", "Orange", "Papaya"];
+    // let J = ["Honda", "Bike", "Activa"];
+    // // for(let i = 0; i < fruits.length; i++){
+    // //     document.write(fruits[i] + "<br>");
+    // // }
+    // fruits.push("Jeni");
+    // fruits.unshift("Jeni");
+    // fruits.pop("Jeni");
+    // document.write(fruits.length);
+    // document.write(fruits + "<br>");
+    // document.write(fruits.join(".......") + "<br>")
+    // document.write(fruits.slice(0, 2))
+    // let animals = fruits.concat(J);
+    // document.write(animals)
+    // document.write(fruits.indexOf("Apple"));
+
+    // let arr = [1, 0, 3, 1, false, 5, 1, 4, 7];
+ 
+    // let result = arr.filter(function(element){
+    //   return element > 5;
+    // });
+    // document.write(result + "<br>"); // Prints: 5,7
+    // document.write(result.length);
+
+    // let fruits = ["Banana", "Orange", "Apple", "Papaya", "Mango"];
+    // let sorted = fruits.sort(); 
+
+    // document.write(sorted + "<br>");
+    // document.write(sorted.reverse());
+
+    // let numbers = [5, 35, 15, 65, 25, 90];
+    // numbers.sort(); 
+    // document.write(numbers);
+
+    // let num = [5,5,6,8,7,9,2,4];
+    // function findmax(array){
+    //   return Math.max.apply(null, array);
+    // }
+
+    // function findmin(array){
+    //   return Math.min.apply(null, array);
+    // }
+    
+    // document.write(findmax(num) + "<br>");
+    // document.write(findmin(num) + "<br>");
+
+    // let i = 1;
+    // while(i <= 5) {    
+    //     document.write("<p>num" + i + "</p>");
+    //     i++;
+    // }
+
+    // for(let i=1; i<=5; i++) {
+    //     document.write("<p>The number is " + i + "</p>");
+    // }
+   
+    // function displaySum(num1, num2) {
+    //     let total = num1 + num2;
+    //     document.write(total);
+    // }
+    // displaySum(2, 10);
+        let btn = document.getElementById("myBtn");
+     
+    // Defining custom functions
+    function sayHello() {
+        alert("Hi, how are you doing?");
+    }
+     
+    function setHoverColor() {
+        btn.style.background = "yellow";
+    }
+     
+    function setNormalColor() {
+        btn.style.background = "";
+    }
+     
+    // Assigning event listeners to the button
+    btn.addEventListener("click", sayHello);
+    btn.addEventListener("mouseover", setHoverColor);
+    btn.addEventListener("mouseout", setNormalColor);
+    </script>
+  </body>
+</html>

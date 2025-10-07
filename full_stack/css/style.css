@@ -1,0 +1,23 @@
+.body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.Avatar{
+    width: 35%;
+    border: 2px dotted blue;
+    border-radius: 20px;
+}
+
+.card{
+    border: 3px solid darkblue;
+    background-color: lightskyblue;
+    padding: 20px;
+    margin: 10%;
+    margin-right: 60%;
+    margin-bottom: 45%;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 20px;
+    border-bottom: 10px darkblue solid;
+    border-left: 10px darkblue solid;
+}

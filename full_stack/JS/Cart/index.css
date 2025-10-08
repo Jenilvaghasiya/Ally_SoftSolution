@@ -1,0 +1,33 @@
+/* Basic styling for the page */
+body {
+    font-family: sans-serif;
+    background-color: #716a6aad;
+    text-align: center;      /* This will center your text and image */
+    padding-top: 30px;
+}
+
+/* Makes the image a specific size */
+img {
+    width: 200px;
+    border-radius: 10px;
+    border-bottom: 5px gray solid;
+    border-left: 5px gray solid;
+}
+
+/* Styles the purchase button */
+button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px; 
+    cursor: pointer;   
+    border-radius:10px ;
+    border-bottom: 8px rgb(255, 255, 255) solid;
+    
+}
+
+/* Styles the error message */
+#error {
+    color: red;
+    font-weight: bold;
+}

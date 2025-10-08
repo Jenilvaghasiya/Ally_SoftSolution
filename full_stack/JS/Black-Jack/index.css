@@ -1,0 +1,35 @@
+body {
+    background-image: url(img/eyestetix-studio-m0EzHtexapU-unsplash.jpg);
+    background-size: cover;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    color: white; /* Default text color */
+    text-align: center;
+    padding-top: 40px;
+}
+
+h1 {
+    color: goldenrod;
+    font-size: 3.5rem; /* Makes the title stand out */
+    margin-bottom: 15px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+p {
+    font-size: 1.5rem;
+    font-style: italic;
+    margin: 10px 0;
+}
+
+/* --- NEW STYLE FOR THE BUTTON --- */
+button {
+    color: #016f2d; /* A dark green from the theme */
+    background-color: goldenrod; /* Same gold as the title */
+    width: 200px;
+    padding: 10px 0;
+    font-weight: bold;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px; /* Adds slightly rounded corners */
+    margin-top: 20px;
+    cursor: pointer; /* Shows a hand icon on hover */
+}

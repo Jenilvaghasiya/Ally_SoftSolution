@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Calculator</title>
+    <style>
+        /* --- CSS for Styling --- */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f2f5;
+        }
+        .calculator {
+            padding: 20px;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .numbers {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 15px;
+            margin: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        button:hover {
+            background-color: #e9e9e9;
+        }
+        #sum-el {
+            margin-top: 20px;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="calculator">
+        <div class="numbers">
+            <span id="num1-el">8</span>
+            <span>&nbsp;</span> <span id="num2-el">2</span>
+        </div>
+
+        <div>
+            <button onclick="add()">Add</button>
+            <button onclick="subtract()">Subtract</button>
+            <button onclick="divide()">Divide</button>
+            <button onclick="multiply()">Multiply</button>
+        </div>
+        
+        <p id="sum-el">Sum:</p>
+    </div>
+
+    <script>
+        let num1 = 8;
+        let num2 = 2;
+
+        let num1El = document.getElementById("num1-el");
+        let num2El = document.getElementById("num2-el");
+        let sumEl = document.getElementById("sum-el");
+
+        num1El.textContent = num1;
+        num2El.textContent = num2;
+
+        function add() {
+            let result = num1 + num2;
+            sumEl.textContent = "Sum: " + result;
+        }
+
+        function subtract() {
+            let result = num1 - num2;
+            sumEl.textContent = "Sum: " + result;
+        }
+
+        function divide() {
+            let result = num1 / num2;
+            sumEl.textContent = "Sum: " + result;
+        }
+
+        function multiply() {
+            let result = num1 * num2;
+            sumEl.textContent = "Sum: " + result;
+        }
+    </script>
+
+</body>
+</html>

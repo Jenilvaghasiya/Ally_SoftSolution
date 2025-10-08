@@ -1,0 +1,29 @@
+body{
+    text-align: center;
+    background-color: cadetblue;
+}
+/* General styling for both buttons */
+button {
+  padding: 10px 20px;
+  color: rgb(0, 0, 0);
+  border-radius: 10px;
+  border-bottom: 5px solid black;
+  font-style: oblique;
+  font-weight: bold; /* Added for better visibility */
+  cursor: pointer; /* Makes it look more like a button */
+}
+
+/* Specific style for the increment button */
+#increment-btn {
+  background-color: aquamarine;
+}
+
+/* Specific style for the save button */
+#save-btn {
+  background-color: rgb(255, 0, 0);
+}
+
+/* Style for the paragraph showing previous entries */
+#save-el {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}

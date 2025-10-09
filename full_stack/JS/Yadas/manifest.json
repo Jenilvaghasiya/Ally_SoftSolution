@@ -1,9 +1,15 @@
 {
   "manifest_version": 3,
-  "version": "1.1",
-  "name": "Leads tracker",
+  "name": "Yadas",
+  "version": "1.1.0",
+  "description": "A simple extension to save and track important leads or links.",
+  "permissions": [
+    "storage",
+    "tabs"
+  ],
   "action": {
     "default_popup": "index.html",
+    "default_title": "Yadas",
     "default_icon": "icon.png"
   }
 }
